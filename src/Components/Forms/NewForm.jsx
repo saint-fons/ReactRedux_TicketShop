@@ -8,8 +8,8 @@ import Toggle from 'material-ui/Toggle'
 import Select from 'react-select'
 import states from './states'
 
-const NewForm = (props) => {
 
+const NewForm = (props) => {
     const TextFieldAdapter = ({ input, meta, ...rest }) => (
         <TextField
             {...input}
@@ -39,9 +39,15 @@ const NewForm = (props) => {
         window.alert(JSON.stringify(values, 0, 2))
     }
     const required = value => (value ? undefined : 'Required')
+    const cityValue = value => (value == "A" || value == "B" ? updateCity(value) : 'Select city A or B')
+    const composeValidators = (...validators) => value =>
+        validators.reduce((error, validator) => error || validator(value), undefined)
 
 
 
+    let updateCity = (value) => {
+        props.updateCityToVisitAC(value)
+    }
 
     return (
         <MuiThemeProvider muiTheme={getMuiTheme()}>
@@ -54,9 +60,9 @@ const NewForm = (props) => {
                                 <Field
                                     name="firstName"
                                     component={TextFieldAdapter}
-                                    validate={required}
+                                    validate={composeValidators(required, cityValue)}
                                     hintText="First Name"
-                                    floatingLabelText="City to visit; A or B"
+                                    floatingLabelText="First Name"
                                 />
                             </div>
                             <div>
@@ -93,6 +99,7 @@ const NewForm = (props) => {
             </Styles>
         </MuiThemeProvider>
     )
+
 }
 
 export default NewForm

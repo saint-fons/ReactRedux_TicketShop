@@ -13,9 +13,8 @@ const Shop = (props) => {
                 <div className={"container__address"}>
                     <img className={"NevaTripLogo"} src={NevaTripLogo} alt={"NevaTripLogo"} />
                 </div>
-                <NewForm getAddress={props.getAddress}
-                         updateAddress={props.updateAddress}
-                         remoteIP={props.remoteIP}
+                <NewForm
+                    updateCityToVisitAC={props.updateCityToVisitAC}
                 />
 
                 <div>

@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acc2c380-9be0-4e5a-96ff-8a6248153f27" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Forms/NewForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Forms/NewForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Forms/Styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Forms/Styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Forms/states.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Forms/states.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Shop.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Shop.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/ShopMetaData.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ShopMetaData.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/ShopContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ShopContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Redux/Ticket-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Ticket-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Style/style-dist.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Style/style-dist.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Style/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Style/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Style/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,11 +43,34 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1613926789923</updated>
-      <workItem from="1613926793411" duration="2932000" />
+      <workItem from="1613926793411" duration="6281000" />
     </task>
+    <task id="LOCAL-00001" summary="City to update">
+      <created>1613930431445</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1613930431445</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="City to update" />
+    <option name="LAST_COMMIT_MESSAGE" value="City to update" />
   </component>
 </project>

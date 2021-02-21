@@ -32,75 +32,75 @@ const btnDefault = css`${btn('#ffffff', '#d5d5d5')} color: #555;`
 const btnPrimary = btn('#4f93ce', '#285f8f')
 
 export default styled.div`
-        font-family: sans-serif;
+  font-family: sans-serif;
 
-        h1 {
-                text-align: center;
-                color: #222;
-        }
+  h1 {
+    text-align: center;
+    color: #222;
+  }
 
-        h2 {
-                text-align: center;
-                color: #222;
-        }
+  h2 {
+    text-align: center;
+    color: #222;
+  }
 
-        & > div {
-                text-align: center;
-        }
+  & > div {
+    text-align: center;
+  }
 
-        & > a {
-                display: block;
-                text-align: center;
-                color: #222;
-                margin-bottom: 10px;
-        }
+  & > a {
+    display: block;
+    text-align: center;
+    color: #222;
+    margin-bottom: 10px;
+  }
 
-        form {
-                max-width: 500px;
-                margin: 150px auto;
-                border: 1px solid #ccc;
-                background-color: #ad77bf;
-                padding: 20px;
-                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-                border-radius: 3px;
-                position: relative;
+  form {
+    max-width: 500px;
+    margin: 150px auto;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    position: relative;
 
-                & > .buttons {
-                        display: flex;
-                        flex-flow: row nowrap;
-                        justify-content: center;
-                        margin-top: 15px;
-                }
+    & > .buttons {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      margin-top: 15px;
+    }
 
-                button {
-                        margin: 0 10px;
+    button {
+      margin: 0 10px;
 
-                        &[type='submit'] {
-                                ${btnPrimary};
-                        }
+      &[type='submit'] {
+        ${btnPrimary};
+      }
 
-                        &[type='button'] {
-                                ${btnDefault};
-                        }
-                }
+      &[type='button'] {
+        ${btnDefault};
+      }
+    }
 
-                .error {
-                        display: flex;
-                        font-weight: bold;
-                        color: #800;
-                        flex-flow: row nowrap;
-                        justify-content: center;
-                }
+    .error {
+      display: flex;
+      font-weight: bold;
+      color: #800;
+      flex-flow: row nowrap;
+      justify-content: center;
+    }
 
-                .Select {
-                        width: 100%;
-                }
+    .Select {
+      width: 100%;
+    }
 
-                pre {
-                        border: 1px solid #ccc;
-                        background: rgba(0, 0, 0, 0.1);
-                        box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.2);
-                        padding: 20px;
-                }
-        }
+    pre {
+      border: 1px solid #ccc;
+      background: rgba(0, 0, 0, 0.1);
+      box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+    }
+  }
 `
