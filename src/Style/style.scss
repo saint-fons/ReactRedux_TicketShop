@@ -1,0 +1,124 @@
+$FullDisplay: 100%;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+}
+
+/******************************************HEADER***********************************/
+
+
+@media (min-width: 720px) {
+
+  /*HEADER*/
+  .container {
+    width: $FullDisplay;
+    height: $FullDisplay;
+
+    position: absolute;
+
+    .container__header {
+      width: $FullDisplay;
+      height: $FullDisplay - 40%;
+
+      background-image: url("pattern-bg.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+
+      .container__address {
+        min-width: $FullDisplay - 70%;
+        max-height: 50px;
+
+        color: white;
+        font-weight: bold;
+
+
+        text-align: center;
+
+        margin: auto;
+
+        font-size: 25px;
+      }
+
+
+      .container__header__data {
+        width: $FullDisplay - 30%;
+        min-height: 250px;
+
+        margin: 80px auto auto auto;
+        border-radius: 25px;
+
+        display: flex;
+        background-color: white;
+
+        position: relative;
+
+        top: 0;
+
+        z-index: 5;
+
+
+        .container__header__data__element {
+          width: $FullDisplay - 75%;
+          min-height: 250px;
+
+          z-index: 5;
+
+          .container__header__data__element__header {
+            max-width: 150px;
+            min-height: 100px;
+
+            margin: auto;
+
+            padding-top: 25px;
+
+            font-size: 18px;
+            color: darkgray;
+
+            text-align: center;
+          }
+
+
+          .container__header__data__element__bottom {
+            max-width: 350px;
+            min-height: 100px;
+
+            margin: auto;
+
+            font-size: 23px;
+
+            text-align: center;
+
+            z-index: 5;
+          }
+        }
+      }
+
+    }
+    .bottom {
+      width: $FullDisplay;
+      height: $FullDisplay - 60%;
+
+      background-color: darkcyan;
+      z-index: 1;
+    }
+  }
+
+  /*This name(leaflet-container) cant be changed*/
+  .leaflet-container {
+    width: $FullDisplay;
+    height: $FullDisplay - 60%;
+
+    position: absolute;
+    z-index: 1;
+  }
+}
+
+/*HEADER*/
+
+/*BOTTOM*/
+
