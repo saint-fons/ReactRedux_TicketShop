@@ -3,6 +3,7 @@ import NewForm from "./Forms/NewForm";
 import Map from "./Map/Map";
 import "./../Style/style.css"
 import ShopMetaData from "./ShopMetaData";
+import NevaTripLogo from "./../Style/nevatrip_logo.png"
 
 const Shop = (props) => {
 
@@ -10,8 +11,7 @@ const Shop = (props) => {
         <div className={"container"}>
             <div className={"container__header"}>
                 <div className={"container__address"}>
-                    Current TimeZone:
-                    {props.timezone}
+                    <img className={"NevaTripLogo"} src={NevaTripLogo} alt={"NevaTripLogo"} />
                 </div>
                 <NewForm getAddress={props.getAddress}
                          updateAddress={props.updateAddress}

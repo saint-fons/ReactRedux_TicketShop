@@ -32,16 +32,14 @@ $FullDisplay: 100%;
       .container__address {
         min-width: $FullDisplay - 70%;
         max-height: 50px;
+        .NevaTripLogo {
+          width: 350px;
+          height: 150px;
+          position: relative;
 
-        color: white;
-        font-weight: bold;
-
-
-        text-align: center;
-
-        margin: auto;
-
-        font-size: 25px;
+          top: 0;
+          left: $FullDisplay - 57%;
+        }
       }
 
 
@@ -49,7 +47,7 @@ $FullDisplay: 100%;
         width: $FullDisplay - 30%;
         min-height: 250px;
 
-        margin: 350px auto auto auto;
+        margin: 150px auto auto auto;
         border-radius: 25px;
 
         display: flex;

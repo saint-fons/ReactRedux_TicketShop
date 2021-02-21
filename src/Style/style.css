@@ -24,16 +24,18 @@
   .container .container__header .container__address {
     min-width: 30%;
     max-height: 50px;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    margin: auto;
-    font-size: 25px;
+  }
+  .container .container__header .container__address .NevaTripLogo {
+    width: 350px;
+    height: 150px;
+    position: relative;
+    top: 0;
+    left: 43%;
   }
   .container .container__header .container__header__data {
     width: 70%;
     min-height: 250px;
-    margin: 350px auto auto auto;
+    margin: 150px auto auto auto;
     border-radius: 25px;
     display: flex;
     background-color: white;

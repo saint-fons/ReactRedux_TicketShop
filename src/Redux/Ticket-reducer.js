@@ -2,10 +2,10 @@ import {locationInfoAPI} from "../API/API";
 
 
 const SET_ADDRESS = 'SET-ADDRESS';
+const CITY_TO_VISIT = 'CITY-TO-VISIT';
 
 
 let initialState = {
-    ip: '',
     location: {
         country: '',
         region: '',
@@ -38,7 +38,10 @@ let initialState = {
         location: "From B to A",
         time: ["2021-08-21 18:30:00", "2021-08-21 18:45:00", "2021-08-21 19:00:00", "2021-08-21 19:15:00", "2021-08-21 19:35:00", "2021-08-21 21:50:00", "2021-08-21 21:55:00"]
     },
-    datePicked: ""
+    datePicked: {
+        cityToVisit: ""
+    }
+
 }
 
 
@@ -52,6 +55,10 @@ const ticketReducer = (state = initialState, action) => {
                 ...action.data
             }
         }
+        case CITY_TO_VISIT: {
+            stateCopy = {...state}
+            stateCopy.datePicked = action.newCity
+        }
         default:
             return state
     }
@@ -60,6 +67,9 @@ const ticketReducer = (state = initialState, action) => {
 
 export const setAddress = (ip, location, as, isp, proxy) =>
     ({type: SET_ADDRESS, data: {ip, location, as, isp, proxy}})
+
+export const updateCityToVisitAC = (text) =>
+    ({type: CITY_TO_VISIT, newCity: text})
 
 export const getAddress = () => { /*ThunkCreator*/
     return (dispatch) => {

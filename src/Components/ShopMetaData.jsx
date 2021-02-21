@@ -6,15 +6,15 @@ const ShopMetaData = (props) => {
         <div className={"container__header__data"}>
             <div className={"container__header__data__element"}>
                 <div className={"container__header__data__element__header"}>
-                    IP ADDRESS
+                    Your city to visit
                 </div>
                 <div className={"container__header__data__element__bottom"}>
-                    {props.address}
+                    Russia, Saint-Petersburg
                 </div>
             </div>
             <div className={"container__header__data__element"}>
                 <div className={"container__header__data__element__header"}>
-                    LOCATION
+                    Your current city
                 </div>
                 <div className={"container__header__data__element__bottom"}>
                     {props.country}, {props.city}
@@ -23,7 +23,7 @@ const ShopMetaData = (props) => {
 
             <div className={"container__header__data__element"}>
                 <div className={"container__header__data__element__header"}>
-                    TIMEZONE
+                    Current time zone
                 </div>
                 <div className={"container__header__data__element__bottom"}>
                     {props.timezone}
@@ -32,10 +32,10 @@ const ShopMetaData = (props) => {
 
             <div className={"container__header__data__element"}>
                 <div className={"container__header__data__element__header"}>
-                    ISP
+                    Time zone in MSK, SPB
                 </div>
                 <div className={"container__header__data__element__bottom"}>
-                    {props.isp}
+                    +03:00
                 </div>
             </div>
 

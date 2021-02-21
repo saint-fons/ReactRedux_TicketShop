@@ -57,7 +57,7 @@ export default styled.div`
 
         form {
                 max-width: 500px;
-                margin: 10px auto;
+                margin: 150px auto;
                 border: 1px solid #ccc;
                 background-color: #ad77bf;
                 padding: 20px;

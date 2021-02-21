@@ -41,6 +41,8 @@ const NewForm = (props) => {
     const required = value => (value ? undefined : 'Required')
 
 
+
+
     return (
         <MuiThemeProvider muiTheme={getMuiTheme()}>
             <Styles>
@@ -54,7 +56,7 @@ const NewForm = (props) => {
                                     component={TextFieldAdapter}
                                     validate={required}
                                     hintText="First Name"
-                                    floatingLabelText="First Name"
+                                    floatingLabelText="City to visit; A or B"
                                 />
                             </div>
                             <div>
