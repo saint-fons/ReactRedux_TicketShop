@@ -7,8 +7,6 @@ const btn = (light, dark) => css`
   padding: 5px 15px;
   font-size: 16px;
   color: white;
-  
-  
   &:visited {
     color: white;
   }
@@ -29,105 +27,80 @@ const btn = (light, dark) => css`
   }
 `
 
-
-
-const btnDefault = css`
-  ${btn('#ffffff', '#d5d5d5')} color: #555;
-`
+const btnDefault = css`${btn('#ffffff', '#d5d5d5')} color: #555;`
 
 const btnPrimary = btn('#4f93ce', '#285f8f')
 
 export default styled.div`
-  font-family: sans-serif;
+        font-family: sans-serif;
 
-  & > div {
-    text-align: center;
-  }
-
-
-  form {
-    max-width: 800px;
-    margin: 10px auto;
-    padding: 20px;
-    border-radius: 3px;
-
-    & > div {
-      display: flex;
-      flex-flow: row nowrap;
-      line-height: 2em;
-      margin: 5px;
-
-      & > label {
-        width: 270px;
-        font-weight: bold;
-        font-size: 20px;
-        line-height: 32px;
-
-        color: white;
-      }
-
-      & > input,
-      & > select,
-      & > textarea {
-        flex: 1;
-        padding: 3px 5px;
-        font-size: 20px;
-        margin-left: 15px;
-        border: 1px solid #ccc;
-        border-radius: 3px;
-      }
-
-      & > input[type='checkbox'] {
-        margin-top: 7px;
-      }
-
-      & > div {
-        margin-left: 16px;
-
-        & > label {
-          display: block;
-
-          & > input {
-            margin-right: 3px;
-          }
+        h1 {
+                text-align: center;
+                color: #222;
         }
-      }
 
-      & > span {
-        line-height: 32px;
-        margin-left: 10px;
-        font-size: 20px;
-        font-weight: bold;
-        color: brown;
-      }
-    }
+        h2 {
+                text-align: center;
+                color: #222;
+        }
 
-    & > .buttons {
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: center;
-      margin-top: 15px;
-    }
+        & > div {
+                text-align: center;
+        }
 
-    button {
-      margin: 0 10px;
+        & > a {
+                display: block;
+                text-align: center;
+                color: #222;
+                margin-bottom: 10px;
+        }
 
-      &[type='submit'] {
-        ${btnPrimary};
-      }
+        form {
+                max-width: 500px;
+                margin: 10px auto;
+                border: 1px solid #ccc;
+                background-color: #ad77bf;
+                padding: 20px;
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+                border-radius: 3px;
+                position: relative;
 
-      &[type='button'] {
-        ${btnDefault};
-      }
-    }
-  }
-    
-    
-    
-  
-    
+                & > .buttons {
+                        display: flex;
+                        flex-flow: row nowrap;
+                        justify-content: center;
+                        margin-top: 15px;
+                }
+
+                button {
+                        margin: 0 10px;
+
+                        &[type='submit'] {
+                                ${btnPrimary};
+                        }
+
+                        &[type='button'] {
+                                ${btnDefault};
+                        }
+                }
+
+                .error {
+                        display: flex;
+                        font-weight: bold;
+                        color: #800;
+                        flex-flow: row nowrap;
+                        justify-content: center;
+                }
+
+                .Select {
+                        width: 100%;
+                }
+
+                pre {
+                        border: 1px solid #ccc;
+                        background: rgba(0, 0, 0, 0.1);
+                        box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.2);
+                        padding: 20px;
+                }
+        }
 `
-
-
-
-

@@ -10,8 +10,8 @@ const Shop = (props) => {
         <div className={"container"}>
             <div className={"container__header"}>
                 <div className={"container__address"}>
-                    Current IP address:
-                    {props.address}
+                    Current TimeZone:
+                    {props.timezone}
                 </div>
                 <NewForm getAddress={props.getAddress}
                          updateAddress={props.updateAddress}
