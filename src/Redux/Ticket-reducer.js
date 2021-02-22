@@ -3,6 +3,8 @@ import {locationInfoAPI} from "../API/API";
 
 const SET_ADDRESS = 'SET-ADDRESS';
 const CITY_TO_VISIT = 'CITY-TO-VISIT';
+const TIME_TO_VISIT = 'TIME-TO-VISIT';
+const RETURN_VISIT = 'RETURN_VISIT';
 
 
 let initialState = {
@@ -29,17 +31,21 @@ let initialState = {
         vpn: null,
         tor: null
     },
-    trace1: {
-        location: "From A to B",
-        time: ["2021-08-21 18:00:00", "2021-08-21 18:30:00", "2021-08-21 18:45:00", "2021-08-21 19:00:00", "2021-08-21 19:15:00", "2021-08-21 21:00:00"]
+    travelRoutes: {
+        trace1: {
+            location: "From A to B",
+            time: ["2021-08-21 18:00:00", "2021-08-21 18:30:00", "2021-08-21 18:45:00", "2021-08-21 19:00:00", "2021-08-21 19:15:00", "2021-08-21 21:00:00"]
 
-    },
-    trace2: {
-        location: "From B to A",
-        time: ["2021-08-21 18:30:00", "2021-08-21 18:45:00", "2021-08-21 19:00:00", "2021-08-21 19:15:00", "2021-08-21 19:35:00", "2021-08-21 21:50:00", "2021-08-21 21:55:00"]
+        },
+        trace2: {
+            location: "From B to A",
+            time: ["2021-08-21 18:30:00", "2021-08-21 18:45:00", "2021-08-21 19:00:00", "2021-08-21 19:15:00", "2021-08-21 19:35:00", "2021-08-21 21:50:00", "2021-08-21 21:55:00"]
+        }
     },
     datePicked: {
-        cityToVisit: ""
+        cityToVisit: "",
+        timeToVisit: "",
+        returnVisit: false
     }
 
 }
@@ -60,6 +66,16 @@ const ticketReducer = (state = initialState, action) => {
             stateCopy.datePicked.cityToVisit = action.newCity
             return stateCopy
         }
+        case TIME_TO_VISIT: {
+            stateCopy = {...state}
+            stateCopy.datePicked.timeToVisit = action.newTime
+            return stateCopy
+        }
+        case RETURN_VISIT: {
+            stateCopy = {...state}
+            stateCopy.datePicked.returnVisit = action.text
+            return stateCopy
+        }
         default:
             return state
     }
@@ -71,6 +87,13 @@ export const setAddress = (ip, location, as, isp, proxy) =>
 
 export const updateCityToVisitAC = (text) =>
     ({type: CITY_TO_VISIT, newCity: text})
+
+export const updateTimeToVisitAC = (text) =>
+    ({type: TIME_TO_VISIT, newTime: text})
+
+export const updateReturnVisitAC = (text) =>
+    ({type: RETURN_VISIT, text})
+
 
 export const getAddress = () => { /*ThunkCreator*/
     return (dispatch) => {

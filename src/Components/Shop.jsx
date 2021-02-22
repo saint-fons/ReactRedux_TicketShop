@@ -4,6 +4,7 @@ import Map from "./Map/Map";
 import "./../Style/style.css"
 import ShopMetaData from "./ShopMetaData";
 import NevaTripLogo from "./../Style/nevatrip_logo.png"
+import {updateReturnVisitAC} from "../Redux/Ticket-reducer";
 
 const Shop = (props) => {
 
@@ -15,6 +16,9 @@ const Shop = (props) => {
                 </div>
                 <NewForm
                     updateCityToVisitAC={props.updateCityToVisitAC}
+                    updateTimeToVisitAC={props.updateTimeToVisitAC}
+                    updateReturnVisitAC={props.updateReturnVisitAC}
+                    getRoutesSuperSelector={props.getRoutesSuperSelector}
                     cityToVisit={props.cityToVisit}
                 />
 

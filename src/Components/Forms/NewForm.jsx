@@ -41,7 +41,9 @@ const NewForm = (props) => {
         window.alert(JSON.stringify(values, 0, 2))
     }
     const required = value => (value ? undefined : 'Required')
-    const cityValue = value => (value == "A" || value == "B" ? updateCity(value) : 'Select city A or B')
+    const cityValue = value => (value === "A" || value === "B" ? updateCity(value) : 'Select city A or B')
+    const timeValue = value => (value ? updateTime(value.label) : "Required")
+    const returnValue = value => (value ? updateReturn(value) : updateReturn(false))
     const composeValidators = (...validators) => value =>
         validators.reduce((error, validator) => error || validator(value), undefined)
 
@@ -50,6 +52,14 @@ const NewForm = (props) => {
     let updateCity = (value) => {
         props.updateCityToVisitAC(value)
     }
+    let updateTime = (value) => {
+        props.updateTimeToVisitAC(value)
+    }
+
+    let updateReturn = (value) => {
+        props.updateReturnVisitAC(value)
+    }
+
 
     return (
         <MuiThemeProvider muiTheme={getMuiTheme()}>
@@ -60,27 +70,45 @@ const NewForm = (props) => {
                         <form onSubmit={handleSubmit}>
                             <div>
                                 <Field
-                                    name="firstName"
+                                    name="cityToVisit"
                                     component={TextFieldAdapter}
                                     validate={composeValidators(required, cityValue)}
-                                    hintText="First Name"
-                                    floatingLabelText="First Name"
+                                    hintText="City to visit"
+                                    floatingLabelText="Pick your city to visit A or B"
                                 />
                             </div>
                             <div>
                                 <Field
                                     name="state"
                                     component={ReactSelectAdapter}
-                                    options={props.cityToVisit == "A" ? states : states1}
+                                    validate={timeValue}
+                                    options={
+                                        props.cityToVisit === "A" ? states : states1
+                                    }
                                 />
                             </div>
                             <div>
                                 <Field
-                                    name="employed"
-                                    label="Employed?"
+                                    name="return"
+                                    label="Return?"
                                     component={ToggleAdapter}
                                     labelPosition="right"
+                                    validate={returnValue}
                                 />
+                            </div>
+                            <div>
+                                <label>Toppings</label>
+                                <div>
+
+                                </div>
+                                <Field name="toppings" component="select" multiple>
+                                    <option value="chicken">🐓 Chicken</option>
+                                    <option value="ham">🐷 Ham</option>
+                                    <option value="mushrooms">🍄 Mushrooms</option>
+                                    <option value="cheese">🧀 Cheese</option>
+                                    <option value="tuna">🐟 Tuna</option>
+                                    <option value="pineapple">🍍 Pineapple</option>
+                                </Field>
                             </div>
                             <div className="buttons">
                                 <button type="submit" disabled={submitting}>

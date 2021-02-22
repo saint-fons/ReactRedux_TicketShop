@@ -2,18 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acc2c380-9be0-4e5a-96ff-8a6248153f27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/Forms/states1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/Ticket-selector.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/API/API.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/API.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Forms/NewForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Forms/NewForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Forms/states.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Forms/states.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Shop.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Shop.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/ShopContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ShopContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Redux/Ticket-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Ticket-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -27,7 +37,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Components/Forms" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../rest-countries-api-with-color-theme-switcher-master/rest-countries-app" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -48,7 +58,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1613926789923</updated>
-      <workItem from="1613926793411" duration="9059000" />
+      <workItem from="1613926793411" duration="16425000" />
     </task>
     <task id="LOCAL-00001" summary="City to update">
       <created>1613930431445</created>
@@ -64,7 +74,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613934141440</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="time to select">
+      <created>1613969360175</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1613969360175</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -84,6 +101,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="City to update" />
     <MESSAGE value="City to visit" />
-    <option name="LAST_COMMIT_MESSAGE" value="City to visit" />
+    <MESSAGE value="time to select" />
+    <option name="LAST_COMMIT_MESSAGE" value="time to select" />
   </component>
 </project>
