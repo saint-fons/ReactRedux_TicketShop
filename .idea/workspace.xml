@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acc2c380-9be0-4e5a-96ff-8a6248153f27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Redux/Ticket-selector.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API/API.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/API.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Forms/NewForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Forms/NewForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Shop.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Shop.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/ShopContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ShopContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Redux/Ticket-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Ticket-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/Ticket-selector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Ticket-selector.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +54,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1613926789923</updated>
-      <workItem from="1613926793411" duration="16425000" />
+      <workItem from="1613926793411" duration="20037000" />
     </task>
     <task id="LOCAL-00001" summary="City to update">
       <created>1613930431445</created>
@@ -81,7 +77,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613969360175</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="select date added">
+      <created>1613982297116</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1613982297116</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,6 +105,7 @@
     <MESSAGE value="City to update" />
     <MESSAGE value="City to visit" />
     <MESSAGE value="time to select" />
-    <option name="LAST_COMMIT_MESSAGE" value="time to select" />
+    <MESSAGE value="select date added" />
+    <option name="LAST_COMMIT_MESSAGE" value="select date added" />
   </component>
 </project>

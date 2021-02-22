@@ -5,9 +5,9 @@ export const getRoutesSelector = (state) => {
     return (state)
 }
 
-export const getRoutesSuperSelector = createSelector(getRoutesSelector,
+export const getRoutesSuperSelector = createSelector(
+    getRoutesSelector,
     (state) => {
-    debugger
         if (state.TicketPage.datePicked.cityToVisit == "A") {
             return state.TicketPage.travelRoutes.trace1
         }

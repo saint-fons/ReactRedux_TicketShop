@@ -60,7 +60,6 @@ const NewForm = (props) => {
         props.updateReturnVisitAC(value)
     }
 
-
     return (
         <MuiThemeProvider muiTheme={getMuiTheme()}>
             <Styles>
@@ -102,14 +101,17 @@ const NewForm = (props) => {
 
                                 </div>
                                 <Field name="toppings" component="select" multiple>
-                                    <option value="chicken">🐓 Chicken</option>
-                                    <option value="ham">🐷 Ham</option>
-                                    <option value="mushrooms">🍄 Mushrooms</option>
-                                    <option value="cheese">🧀 Cheese</option>
-                                    <option value="tuna">🐟 Tuna</option>
-                                    <option value="pineapple">🍍 Pineapple</option>
+                                    {
+
+                                        props.getRoutesSuperSelector.map ( r =>
+                                            <option value={r}>{r}</option>
+                                        )
+                                    }
+
                                 </Field>
                             </div>
+
+
                             <div className="buttons">
                                 <button type="submit" disabled={submitting}>
                                     Log In

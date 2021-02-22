@@ -21,12 +21,12 @@ class ShopContainer extends React.Component {
                 updateCityToVisitAC={this.props.updateCityToVisitAC}
                 updateTimeToVisitAC={this.props.updateTimeToVisitAC}
                 updateReturnVisitAC={this.props.updateReturnVisitAC}
+                getRoutesSuperSelector={this.props.getRoutesSuperSelector}
                 country={this.props.country}
                 city={this.props.city}
                 provider={this.props.provider}
                 timezone={this.props.timezone}
                 cityToVisit={this.props.cityToVisit}
-                getRoutesSuperSelector={this.props.getRoutesSuperSelector}
             />
         </div>
     }

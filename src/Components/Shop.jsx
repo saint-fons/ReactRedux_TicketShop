@@ -19,6 +19,7 @@ const Shop = (props) => {
                     updateTimeToVisitAC={props.updateTimeToVisitAC}
                     updateReturnVisitAC={props.updateReturnVisitAC}
                     getRoutesSuperSelector={props.getRoutesSuperSelector}
+                    time={props.time}
                     cityToVisit={props.cityToVisit}
                 />
 
