@@ -5,13 +5,10 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
 import TextField from 'material-ui/TextField'
 import Toggle from 'material-ui/Toggle'
-import Select from 'react-select'
-import states from './states'
-import states1 from './states1'
 
 
 const NewForm = (props) => {
-    debugger
+
     const TextFieldAdapter = ({ input, meta, ...rest }) => (
         <TextField
             {...input}
@@ -29,11 +26,6 @@ const NewForm = (props) => {
             {...rest}
         />
     )
-
-    const ReactSelectAdapter = ({ input, ...rest }) => (
-        <Select {...input} {...rest} searchable />
-    )
-
     const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
     const onSubmit = async values => {
@@ -42,7 +34,8 @@ const NewForm = (props) => {
     }
     const required = value => (value ? undefined : 'Required')
     const cityValue = value => (value === "A" || value === "B" ? updateCity(value) : 'Select city A or B')
-    const timeValue = value => (value ? updateTime(value.label) : "Required")
+    const timeValue = value => (value ? updateTime(value) : "Required")
+    const timeWayBack = value => (value ? updateTimeToWayBack(value) : "Required")
     const returnValue = value => (value ? updateReturn(value) : updateReturn(false))
     const composeValidators = (...validators) => value =>
         validators.reduce((error, validator) => error || validator(value), undefined)
@@ -54,6 +47,10 @@ const NewForm = (props) => {
     }
     let updateTime = (value) => {
         props.updateTimeToVisitAC(value)
+    }
+
+    let updateTimeToWayBack = (value) => {
+        props.updateTimeToWayBackAC(value)
     }
 
     let updateReturn = (value) => {
@@ -77,14 +74,21 @@ const NewForm = (props) => {
                                 />
                             </div>
                             <div>
+                                <label>Pick a time</label>
                                 <Field
-                                    name="state"
-                                    component={ReactSelectAdapter}
+                                    name="timePicked"
+                                    component="select"
                                     validate={timeValue}
-                                    options={
-                                        props.cityToVisit === "A" ? states : states1
+                                >
+                                    {
+
+                                        props.getRoutesSuperSelector.map ( r =>
+                                            <option
+                                                value={r.toLocaleString()}>{r.toLocaleString()}
+                                            </option>
+                                        )
                                     }
-                                />
+                                </Field>
                             </div>
                             <div>
                                 <Field
@@ -96,24 +100,26 @@ const NewForm = (props) => {
                                 />
                             </div>
                             <div>
-                                <label>Toppings</label>
-                                <div>
-
-                                </div>
-                                <Field name="toppings" component="select" multiple>
+                                <label>Way back</label>
+                                <Field
+                                    name="wayBack"
+                                    component="select"
+                                    validate={timeWayBack}
+                                >
                                     {
-
-                                        props.getRoutesSuperSelector.map ( r =>
-                                            <option value={r}>{r}</option>
+                                        props.getWayBackSuperSelector.map ( r =>
+                                            <option
+                                                value={r}>{r.toLocaleString()}
+                                            </option>
                                         )
                                     }
-
                                 </Field>
                             </div>
 
-
                             <div className="buttons">
-                                <button type="submit" disabled={submitting}>
+                                <button
+                                    type="submit"
+                                    disabled={submitting}>
                                     Log In
                                 </button>
                                 <button

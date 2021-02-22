@@ -1,17 +1,23 @@
 import React from 'react'
 import {compose} from "redux";
-import {getAddress, updateCityToVisitAC, updateReturnVisitAC, updateTimeToVisitAC} from "./../Redux/Ticket-reducer";
+import {
+    getAddress,
+    updateCityToVisitAC,
+    updateReturnVisitAC,
+    updateTimeToVisitAC,
+    updateTimeToWayBackAC
+} from "./../Redux/Ticket-reducer";
 import Shop from "./Shop";
 import connect from "react-redux/lib/connect/connect";
 import "./../Style/style.css"
-import {getRoutesSuperSelector} from "../Redux/Ticket-selector";
+import {getRoutesSuperSelector, getWayBackSuperSelector} from "../Redux/Ticket-selector";
 
 
 
 class ShopContainer extends React.Component {
 
     componentDidMount() {
-        this.props.getAddress()
+        //this.props.getAddress()
     }
 
     render() {
@@ -20,8 +26,10 @@ class ShopContainer extends React.Component {
                 address={this.props.address}
                 updateCityToVisitAC={this.props.updateCityToVisitAC}
                 updateTimeToVisitAC={this.props.updateTimeToVisitAC}
+                updateTimeToWayBackAC={this.props.updateTimeToWayBackAC}
                 updateReturnVisitAC={this.props.updateReturnVisitAC}
                 getRoutesSuperSelector={this.props.getRoutesSuperSelector}
+                getWayBackSuperSelector={this.props.getWayBackSuperSelector}
                 country={this.props.country}
                 city={this.props.city}
                 provider={this.props.provider}
@@ -43,7 +51,8 @@ let mapStateToProps = (state) => {
         lng: state.TicketPage.location.lng,
         timezone: state.TicketPage.location.timezone,
         cityToVisit: state.TicketPage.datePicked.cityToVisit,
-        getRoutesSuperSelector: getRoutesSuperSelector(state)
+        getRoutesSuperSelector: getRoutesSuperSelector(state),
+        getWayBackSuperSelector: getWayBackSuperSelector(state)
     }
 }
 
@@ -51,6 +60,7 @@ export default compose(connect(mapStateToProps, {
     getAddress,
     updateCityToVisitAC,
     updateTimeToVisitAC,
-    updateReturnVisitAC
+    updateReturnVisitAC,
+    updateTimeToWayBackAC
 }))
 (ShopContainer)

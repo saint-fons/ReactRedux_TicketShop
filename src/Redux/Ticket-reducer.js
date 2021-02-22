@@ -4,6 +4,7 @@ import {locationInfoAPI} from "../API/API";
 const SET_ADDRESS = 'SET-ADDRESS';
 const CITY_TO_VISIT = 'CITY-TO-VISIT';
 const TIME_TO_VISIT = 'TIME-TO-VISIT';
+const TIME_TO_WAY_BACK = 'TIME-TO-WAY_BACK';
 const RETURN_VISIT = 'RETURN_VISIT';
 
 
@@ -33,29 +34,35 @@ let initialState = {
     },
     travelRoutes: {
         trace1: [
-            "2021-08-21 18:00:00",
-            "2021-08-21 18:30:00",
-            "2021-08-21 18:45:00",
-            "2021-08-21 19:00:00",
-            "2021-08-21 19:15:00",
-            "2021-08-21 21:00:00"
+            "Your route not selected"
         ],
         trace2: [
-            "2021-08-21 18:30:00",
-            "2021-08-21 18:45:00",
-            "2021-08-21 19:00:00",
-            "2021-08-21 19:15:00",
-            "2021-08-21 19:35:00",
-            "2021-08-21 21:50:00",
-            "2021-08-21 21:55:00"
-        ]
+            new Date("01.08.2021 18:00"),
+            new Date("01.08.2021 18:30"),
+            new Date("01.08.2021 19:00"),
+            new Date("01.08.2021 19:30"),
+            new Date("01.08.2021 20:00"),
+            new Date("01.08.2021 20:30")
+        ],
+        trace3: [
+            new Date("01.08.2021 18:00"),
+            new Date("01.08.2021 18:50"),
+            new Date("01.08.2021 19:00"),
+            new Date("01.08.2021 19:50"),
+            new Date("01.08.2021 20:00"),
+            new Date("01.08.2021 20:50")
+        ],
+        trace4: [
+            "Way back not selected"
+        ],
+
     },
     datePicked: {
-        cityToVisit: "A",
-        timeToVisit: "",
-        returnVisit: false
+        cityToVisit: "",
+        timeToVisit: new Date(""),
+        returnVisit: false,
+        timeToWayBack: new Date("")
     }
-
 }
 
 
@@ -78,9 +85,17 @@ const ticketReducer = (
         }
         case TIME_TO_VISIT: {
             stateCopy = {...state}
-            stateCopy.datePicked.timeToVisit = action.newTime
+            stateCopy.datePicked.timeToVisit = action.text
             return stateCopy
         }
+
+        case TIME_TO_WAY_BACK: {
+            stateCopy = {...state}
+            stateCopy.datePicked.timeToWayBack = action.newTime
+            return stateCopy
+        }
+
+
         case RETURN_VISIT: {
             stateCopy = {...state}
             stateCopy.datePicked.returnVisit = action.text
@@ -99,7 +114,12 @@ export const updateCityToVisitAC = (text) =>
     ({type: CITY_TO_VISIT, newCity: text})
 
 export const updateTimeToVisitAC = (text) =>
-    ({type: TIME_TO_VISIT, newTime: text})
+    ({type: TIME_TO_VISIT, text})
+
+export const updateTimeToWayBackAC = (text) =>
+    ({type: TIME_TO_WAY_BACK, newTime: text})
+
+
 
 export const updateReturnVisitAC = (text) =>
     ({type: RETURN_VISIT, text})
