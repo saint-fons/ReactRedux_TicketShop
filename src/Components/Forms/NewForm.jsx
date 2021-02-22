@@ -7,9 +7,11 @@ import TextField from 'material-ui/TextField'
 import Toggle from 'material-ui/Toggle'
 import Select from 'react-select'
 import states from './states'
+import states1 from './states1'
 
 
 const NewForm = (props) => {
+    debugger
     const TextFieldAdapter = ({ input, meta, ...rest }) => (
         <TextField
             {...input}
@@ -69,7 +71,7 @@ const NewForm = (props) => {
                                 <Field
                                     name="state"
                                     component={ReactSelectAdapter}
-                                    options={states}
+                                    options={props.cityToVisit == "A" ? states : states1}
                                 />
                             </div>
                             <div>

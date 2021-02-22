@@ -57,7 +57,7 @@ const ticketReducer = (state = initialState, action) => {
         }
         case CITY_TO_VISIT: {
             stateCopy = {...state}
-            stateCopy.datePicked = action.newCity
+            stateCopy.datePicked.cityToVisit = action.newCity
             return stateCopy
         }
         default:

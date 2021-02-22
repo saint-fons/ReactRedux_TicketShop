@@ -15,6 +15,7 @@ const Shop = (props) => {
                 </div>
                 <NewForm
                     updateCityToVisitAC={props.updateCityToVisitAC}
+                    cityToVisit={props.cityToVisit}
                 />
 
                 <div>
@@ -25,6 +26,7 @@ const Shop = (props) => {
                         city={props.city}
                         provider={props.provider}
                         timezone={props.timezone}
+                        cityToVisit={props.cityToVisit}
                     />
                 </div>
             </div>
