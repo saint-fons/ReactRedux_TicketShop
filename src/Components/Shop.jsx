@@ -21,6 +21,10 @@ const Shop = (props) => {
                     updateNumberOfTicketsAC={props.updateNumberOfTicketsAC}
                     getRoutesSuperSelector={props.getRoutesSuperSelector}
                     getWayBackSuperSelector={props.getWayBackSuperSelector}
+                    picketCitySuperSelector={props.picketCitySuperSelector}
+                    picketTimeSuperSelector={props.picketTimeSuperSelector}
+                    picketTimeWayBackSuperSelector={props.picketTimeWayBackSuperSelector}
+                    picketNumberOfTicketsSuperSelector={props.picketNumberOfTicketsSuperSelector}
                     time={props.time}
                     cityToVisit={props.cityToVisit}
                     timeToVisit={props.timeToVisit}

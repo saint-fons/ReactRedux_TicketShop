@@ -10,7 +10,13 @@ import {
 import Shop from "./Shop";
 import connect from "react-redux/lib/connect/connect";
 import "./../Style/style.css"
-import {getRoutesSuperSelector, getWayBackSuperSelector} from "../Redux/Ticket-selector";
+import {
+    getRoutesSuperSelector,
+    getWayBackSuperSelector,
+    picketCitySuperSelector, picketNumberOfTicketsSuperSelector,
+    picketTimeSuperSelector,
+    picketTimeWayBackSuperSelector
+} from "../Redux/Ticket-selector";
 
 
 
@@ -31,6 +37,10 @@ class ShopContainer extends React.Component {
                 updateNumberOfTicketsAC={this.props.updateNumberOfTicketsAC}
                 getRoutesSuperSelector={this.props.getRoutesSuperSelector}
                 getWayBackSuperSelector={this.props.getWayBackSuperSelector}
+                picketCitySuperSelector={this.props.picketCitySuperSelector}
+                picketTimeSuperSelector={this.props.picketTimeSuperSelector}
+                picketTimeWayBackSuperSelector={this.props.picketTimeWayBackSuperSelector}
+                picketNumberOfTicketsSuperSelector={this.props.picketNumberOfTicketsSuperSelector}
                 country={this.props.country}
                 city={this.props.city}
                 provider={this.props.provider}
@@ -55,7 +65,11 @@ let mapStateToProps = (state) => {
         timezone: state.TicketPage.location.timezone,
         cityToVisit: state.TicketPage.datePicked.cityToVisit,
         getRoutesSuperSelector: getRoutesSuperSelector(state),
-        getWayBackSuperSelector: getWayBackSuperSelector(state)
+        getWayBackSuperSelector: getWayBackSuperSelector(state),
+        picketCitySuperSelector: picketCitySuperSelector(state),
+        picketTimeSuperSelector: picketTimeSuperSelector(state),
+        picketTimeWayBackSuperSelector: picketTimeWayBackSuperSelector(state),
+        picketNumberOfTicketsSuperSelector: picketNumberOfTicketsSuperSelector(state)
     }
 }
 

@@ -164,7 +164,15 @@ const NewForm = (props) => {
                                 </button>
                             </div>
                             <pre>
-                                You have chosen a city: {props.cityToVisit}
+                                {props.picketCitySuperSelector}
+                                <br/>
+                                {props.picketTimeSuperSelector}
+                                <br/>
+                                {props.picketTimeWayBackSuperSelector}
+                                <br/>
+                                {props.picketNumberOfTicketsSuperSelector}
+                                <br/>
+                                {props.picketNumberOfTicketsSuperSelector}
 
                             </pre>
                         </form>

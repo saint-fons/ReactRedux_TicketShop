@@ -61,9 +61,9 @@ let initialState = {
     datePicked: {
         cityToVisit: "",
         numberOfTickets: "",
-        timeToVisit: new Date(""),
+        timeToVisit: null,
         returnVisit: false,
-        timeToWayBack: new Date("")
+        timeToWayBack: null
     }
 }
 

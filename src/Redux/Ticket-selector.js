@@ -38,3 +38,67 @@ export const getWayBackSuperSelector = createSelector(
         }
     }
 )
+
+export const picketCitySuperSelector = createSelector(
+    getRoutesSelector,
+    (state) => {
+        if (state.TicketPage.datePicked.cityToVisit == "") {
+            return ""
+        }
+        if (state.TicketPage.datePicked.cityToVisit == "A") {
+            return ("Your journey begins to city A")
+        }
+        if (state.TicketPage.datePicked.cityToVisit == "B") {
+            return ("Your journey begins to city B")
+        }
+}
+)
+
+let journey = "Your journey starts at "
+
+export const picketTimeSuperSelector = createSelector(
+    getRoutesSelector,
+    (state) => {
+        if (state.TicketPage.datePicked.timeToVisit == null) {
+            return ""
+        }
+        if (state.TicketPage.datePicked.timeToVisit != null) {
+            return (journey + state.TicketPage.datePicked.timeToVisit.toString())
+        }
+}
+)
+
+let wayBack = "You have chosen a return ticket to "
+
+export const picketTimeWayBackSuperSelector = createSelector(
+    getRoutesSelector,
+    (state) => {
+        if (state.TicketPage.datePicked.timeToWayBack == null) {
+            return ""
+        }
+        if (state.TicketPage.datePicked.timeToVisit != null) {
+            return (wayBack + state.TicketPage.datePicked.timeToWayBack.toString())
+        }
+}
+)
+
+
+let numberOfTickets = "You are purchasing tickets "
+
+export const picketNumberOfTicketsSuperSelector = createSelector(
+    getRoutesSelector,
+    (state) => {
+        if (state.TicketPage.datePicked.numberOfTickets == "") {
+            return ""
+        }
+        if (state.TicketPage.datePicked.numberOfTickets != "") {
+            return (numberOfTickets + state.TicketPage.datePicked.numberOfTickets)
+        }
+}
+)
+
+
+
+
+
+
