@@ -5,7 +5,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
 import TextField from 'material-ui/TextField'
 import Toggle from 'material-ui/Toggle'
-import Calculate from "../Calculate";
+import Payment from "../Payment";
+import {NavLink} from "react-router-dom";
 
 
 const NewForm = (props) => {
@@ -38,6 +39,7 @@ const NewForm = (props) => {
     const cityValue = value => (value === "A" || value === "B" ? updateCity(value) : 'Select city A or B')
     const timeValue = value => (value ? updateTime(value) : "Required")
     const timeWayBack = value => (value ? updateTimeToWayBack(value) : "Required")
+    const numberOfTickets = value => (value ? updateTimeToWayBack(value) : "Required")
     const returnValue = value => (value ? updateReturn(value) : updateReturn(false))
     const composeValidators = (...validators) => value =>
         validators.reduce((error, validator) => error || validator(value), undefined)
@@ -119,6 +121,22 @@ const NewForm = (props) => {
                                     }
                                 </Field>
                             </div>
+                            <div>
+                                <label>Number of tickets</label>
+                                <Field
+                                    name="numberOfTickets"
+                                    component="select"
+                                    validate={numberOfTickets}
+                                >
+                                    {
+                                        props.getWayBackSuperSelector.map ( r =>
+                                            <option
+                                                value={r.toLocaleString()}>{r.toLocaleString()}
+                                            </option>
+                                        )
+                                    }
+                                </Field>
+                            </div>
 
                             <div className="buttons">
                                 <button
@@ -128,10 +146,13 @@ const NewForm = (props) => {
                                 </button>
                                 <button
                                     type="button"
-                                    onClick={form.reset}
+                                    onClick={form}
                                     disabled={submitting || pristine}
                                 >
-                                    Reset
+                                    <NavLink to={'/payment'}
+                                    >
+                                        Payment
+                                    </NavLink>
                                 </button>
                             </div>
                             <pre>{JSON.stringify(values, 0, 2)}</pre>
