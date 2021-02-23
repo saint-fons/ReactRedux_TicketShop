@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acc2c380-9be0-4e5a-96ff-8a6248153f27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Style/IMG/table.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Style/IMG/table1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Forms/NewForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Forms/NewForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Redux/Ticket-selector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Ticket-selector.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,6 +60,7 @@
       <workItem from="1613926793411" duration="30587000" />
       <workItem from="1614001336501" duration="10218000" />
       <workItem from="1614059460217" duration="4897000" />
+      <workItem from="1614095796045" duration="1366000" />
     </task>
     <task id="LOCAL-00001" summary="City to update">
       <created>1613930431445</created>
@@ -156,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614081786726</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="task 1 added">
+      <created>1614094830319</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1614094830319</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,7 +192,8 @@
     <MESSAGE value="new based prev" />
     <MESSAGE value="done" />
     <MESSAGE value="README.md fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="README.md fixed" />
+    <MESSAGE value="task 1 added" />
+    <option name="LAST_COMMIT_MESSAGE" value="task 1 added" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

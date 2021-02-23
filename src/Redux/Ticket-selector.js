@@ -8,13 +8,13 @@ export const getRoutesSelector = (state) => {
 export const getRoutesSuperSelector = createSelector(
     getRoutesSelector,
     (state) => {
-        if (state.TicketPage.datePicked.cityToVisit == "") {
+        if (state.TicketPage.datePicked.cityToVisit === "") {
             return state.TicketPage.travelRoutes.trace1
         }
-        if (state.TicketPage.datePicked.cityToVisit == "A") {
+        if (state.TicketPage.datePicked.cityToVisit === "A") {
             return state.TicketPage.travelRoutes.trace2
         }
-        if (state.TicketPage.datePicked.cityToVisit == "B") {
+        if (state.TicketPage.datePicked.cityToVisit === "B") {
             return state.TicketPage.travelRoutes.trace3
         }
     }
@@ -24,15 +24,15 @@ export const getRoutesSuperSelector = createSelector(
 export const getWayBackSuperSelector = createSelector(
     getRoutesSelector,
     (state) => {
-        if (state.TicketPage.datePicked.returnVisit == false) {
+        if (state.TicketPage.datePicked.returnVisit === false) {
             return state.TicketPage.travelRoutes.trace4
         }
-        if (state.TicketPage.datePicked.returnVisit == true) {
-            if(state.TicketPage.datePicked.cityToVisit == "A"){
+        if (state.TicketPage.datePicked.returnVisit === true) {
+            if(state.TicketPage.datePicked.cityToVisit === "A"){
                 return state.TicketPage.travelRoutes.trace3.filter (t =>
                     (t.toLocaleString() > state.TicketPage.datePicked.timeToVisit))
             }
-            if(state.TicketPage.datePicked.cityToVisit == "B"){
+            if(state.TicketPage.datePicked.cityToVisit === "B"){
                 return state.TicketPage.travelRoutes.trace2.filter (t =>
                     (t.toLocaleString() > state.TicketPage.datePicked.timeToVisit))
             }
@@ -43,13 +43,13 @@ export const getWayBackSuperSelector = createSelector(
 export const picketCitySuperSelector = createSelector(
     getRoutesSelector,
     (state) => {
-        if (state.TicketPage.datePicked.cityToVisit == "") {
+        if (state.TicketPage.datePicked.cityToVisit === "") {
             return ""
         }
-        if (state.TicketPage.datePicked.cityToVisit == "A") {
+        if (state.TicketPage.datePicked.cityToVisit === "A") {
             return ("Your journey begins to city A")
         }
-        if (state.TicketPage.datePicked.cityToVisit == "B") {
+        if (state.TicketPage.datePicked.cityToVisit === "B") {
             return ("Your journey begins to city B")
         }
 }
@@ -63,7 +63,7 @@ export const picketTimeSuperSelector = createSelector(
         if (state.TicketPage.datePicked.timeToVisit == null) {
             return ""
         }
-        if (state.TicketPage.datePicked.timeToVisit != null) {
+        if (true) {
             return (journey + state.TicketPage.datePicked.timeToVisit.toString())
         }
 }
@@ -92,15 +92,15 @@ let priceWithWayBack = 1200
 export const picketNumberOfTicketsSuperSelector = createSelector(
     getRoutesSelector,
     (state) => {
-        if (state.TicketPage.datePicked.numberOfTickets == "") {
+        if (state.TicketPage.datePicked.numberOfTickets === "") {
             return ""
         }
         //Если выбраны билеты, смотрим выбран ли путь назад
-        if (state.TicketPage.datePicked.numberOfTickets != "") {
+        if (state.TicketPage.datePicked.numberOfTickets !== "") {
             if(state.TicketPage.datePicked.timeToWayBack == null) {
                 return (numberOfTickets + state.TicketPage.datePicked.numberOfTickets + oneWayPrise + (priceWithoutWayBack * state.TicketPage.datePicked.numberOfTickets))
             }
-            if(state.TicketPage.datePicked.timeToWayBack != null) {
+            if(true) {
                 return (numberOfTickets + state.TicketPage.datePicked.numberOfTickets + oneWayPrise + (priceWithWayBack * state.TicketPage.datePicked.numberOfTickets))
             }
         }
