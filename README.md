@@ -1,6 +1,7 @@
 # React Redux(NevaTrip App)
 
-Веб версия приложения: [live version](https://github.com/facebook/create-react-app)
+Веб версия приложения: [live version](https://react-redux-ticket-shop-git-master-saint-fons.vercel.app/)
+
 
 ## Для запуска
 * npm install / yarn install
