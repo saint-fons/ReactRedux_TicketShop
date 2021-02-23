@@ -171,8 +171,6 @@ const NewForm = (props) => {
                                 {props.picketTimeWayBackSuperSelector}
                                 <br/>
                                 {props.picketNumberOfTicketsSuperSelector}
-                                <br/>
-                                {props.picketNumberOfTicketsSuperSelector}
 
                             </pre>
                         </form>

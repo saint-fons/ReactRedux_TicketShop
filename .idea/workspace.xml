@@ -4,9 +4,6 @@
     <list default="true" id="acc2c380-9be0-4e5a-96ff-8a6248153f27" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Forms/NewForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Forms/NewForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Shop.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Shop.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/ShopContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ShopContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Ticket-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Ticket-reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Redux/Ticket-selector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Ticket-selector.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614068441436</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="based prev messages">
+      <created>1614072282798</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1614072282798</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,7 +154,8 @@
     <MESSAGE value="before react router" />
     <MESSAGE value="react router added" />
     <MESSAGE value="way without router" />
-    <option name="LAST_COMMIT_MESSAGE" value="way without router" />
+    <MESSAGE value="based prev messages" />
+    <option name="LAST_COMMIT_MESSAGE" value="based prev messages" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

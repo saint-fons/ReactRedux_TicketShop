@@ -54,7 +54,7 @@ export const picketCitySuperSelector = createSelector(
 }
 )
 
-let journey = "Your journey starts at "
+let journey = "Your journey starts at(MSK, SPB) "
 
 export const picketTimeSuperSelector = createSelector(
     getRoutesSelector,
@@ -83,7 +83,10 @@ export const picketTimeWayBackSuperSelector = createSelector(
 )
 
 
-let numberOfTickets = "You are purchasing tickets "
+let numberOfTickets = "You are purchasing tickets: "
+let oneWayPrise = ". The total price will be "
+let priceWithoutWayBack = 700
+let priceWithWayBack = 1200
 
 export const picketNumberOfTicketsSuperSelector = createSelector(
     getRoutesSelector,
@@ -91,8 +94,14 @@ export const picketNumberOfTicketsSuperSelector = createSelector(
         if (state.TicketPage.datePicked.numberOfTickets == "") {
             return ""
         }
+        //Если выбраны билеты, смотрим выбран ли путь назад
         if (state.TicketPage.datePicked.numberOfTickets != "") {
-            return (numberOfTickets + state.TicketPage.datePicked.numberOfTickets)
+            if(state.TicketPage.datePicked.timeToWayBack == null) {
+                return (numberOfTickets + state.TicketPage.datePicked.numberOfTickets + oneWayPrise + (priceWithoutWayBack * state.TicketPage.datePicked.numberOfTickets))
+            }
+            if(state.TicketPage.datePicked.timeToWayBack != null) {
+                return (numberOfTickets + state.TicketPage.datePicked.numberOfTickets + oneWayPrise + (priceWithWayBack * state.TicketPage.datePicked.numberOfTickets))
+            }
         }
 }
 )
