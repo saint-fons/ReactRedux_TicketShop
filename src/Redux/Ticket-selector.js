@@ -21,8 +21,6 @@ export const getRoutesSuperSelector = createSelector(
 )
 
 
-let newTime = new Date()
-
 export const getWayBackSuperSelector = createSelector(
     getRoutesSelector,
     (state) => {

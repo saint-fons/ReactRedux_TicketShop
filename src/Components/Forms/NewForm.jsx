@@ -5,7 +5,6 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
 import TextField from 'material-ui/TextField'
 import Toggle from 'material-ui/Toggle'
-import {NavLink} from "react-router-dom";
 
 
 const NewForm = (props) => {
@@ -105,6 +104,7 @@ const NewForm = (props) => {
 
                                         props.getRoutesSuperSelector.map ( r =>
                                             <option
+                                                key={r}
                                                 value={r.toLocaleString()}>{r.toLocaleString()}
                                             </option>
                                         )
@@ -130,6 +130,7 @@ const NewForm = (props) => {
                                     {
                                         props.getWayBackSuperSelector.map ( r =>
                                             <option
+                                                key={r}
                                                 value={r.toLocaleString()}>{r.toLocaleString()}
                                             </option>
                                         )
