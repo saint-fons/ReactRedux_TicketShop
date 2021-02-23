@@ -23,7 +23,7 @@ import {
 class ShopContainer extends React.Component {
 
     componentDidMount() {
-        //this.props.getAddress()
+        this.props.getAddress()
     }
 
     render() {

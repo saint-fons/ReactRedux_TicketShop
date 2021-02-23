@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# React Redux(NevaTrip App)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Веб версия приложения: [live version](https://github.com/facebook/create-react-app)
 
-## Available Scripts
+## Для запуска
+* npm install / yarn install
+* npm start / yarn start
+* npm build / yarn build
+## Использованы технологии; 
+#### React, Redux, HTML, JS, CSS, Final-Form, LeafLetJS(API), GeoIpiFy(API), SASS/SCSS, ThunkCreator, Compose, Reselect, Axios, Styled-Components
 
-In the project directory, you can run:
+#### I. Для представления данных из Redux используется компонента ShopContainer
+#### II. Во время монтирования ShopContainer вызывается getAddress() и инициирует обращение к API GeoIpiFy
+#### III. API GeoIpiFy без указания конкретного IP адреса возвращает информацию по адресу с которого идет запрос. Так мы узнаем, где сейчас пользователь и какой у него часовой пояс 
 
-### `yarn start`
+![img.png](src/Style/IMG/geoipify.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### IV. В примере ниже данные при использовании VPN
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![img.png](src/Style/IMG/redux_state.png)
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### V. Данные из ShopContainer пробрасываются в компоненту Shop, которая возвращает компоненты NewForm(Форма в header), ShopMetaData(Панель с информацией о пользователе), Map(Footer с картой местонахождения пользователя)
 
-### `yarn build`
+![img.png](src/Style/IMG/mane_page.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### VI. Форма ввода города назначения имеет валидацию. Только город A или B(Анг.). "Required", если фокус пропал, а города нет.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![img.png](src/Style/IMG/Required.png)
+![img.png](src/Style/IMG/pick_city.png)
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### VI. Поле: Pick a Time. Не содержит данных, пока не выбран город A или B. После ввода города время отправления будет разным для A и для B.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![img.png](src/Style/IMG/cityAPicked.png)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### VII. Поле: Pick a Time. Не содержит данных, пока не выбран город A или B. После ввода города время отправления будет разным для A и для B.
 
-## Learn More
+![img.png](src/Style/IMG/cityBPicked.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### VIII. Переключатель: "Return?". Отмечается, если нужен обратный билет. Повлияет на конечную цену билета.
+#### IX. После активации переключателя, появляется возможность выбрать время обратного пути не позднее даты отправления.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![img.png](src/Style/IMG/wayBackPicked.png)
 
-### Code Splitting
+#### X. Поле "Select the number of tickets" - выбор количества билетов. Имеет валидацию; только положительные натуральные числа
+#### XI. На сером фоне представлен результат выбора пользователя. Конечная цена будет зависеть от количества выбранных билетов и обратного билета
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![img.png](src/Style/IMG/price1.png)
+![img.png](src/Style/IMG/priceWithWayBack.png)
 
-### Analyzing the Bundle Size
+## Структура приложения;
+* /src/API содержит файл для обращения к серверу
+* /Components/Forms компонента для ввода и отображения данных. Содержит файл стилей формы
+* /Components/Map компонента карты. В нее передаются данные о широте и долготе для отображения маркера на карте
+* /Redux файл Ticket-reducer содержит редюсер состояния приложения
+* /Style/IMG картинки для readme/md
+* /Style/style.scss препроцессор глобальных стилей
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `yarn build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

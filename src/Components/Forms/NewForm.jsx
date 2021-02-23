@@ -145,24 +145,6 @@ const NewForm = (props) => {
                                     floatingLabelText="Select the number of tickets"
                                 />
                             </div>
-
-                            <div className="buttons">
-                                <button
-                                    type="submit"
-                                    disabled={submitting}>
-                                    Log In
-                                </button>
-                                <button
-                                    type="button"
-                                    onClick={form}
-                                    disabled={submitting || pristine}
-                                >
-                                    <NavLink to={'/payment'}
-                                    >
-                                        Payment
-                                    </NavLink>
-                                </button>
-                            </div>
                             <pre>
                                 {props.picketCitySuperSelector}
                                 <br/>

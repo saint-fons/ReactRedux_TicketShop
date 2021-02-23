@@ -20,6 +20,9 @@ export const getRoutesSuperSelector = createSelector(
     }
 )
 
+
+let newTime = new Date()
+
 export const getWayBackSuperSelector = createSelector(
     getRoutesSelector,
     (state) => {
@@ -29,11 +32,11 @@ export const getWayBackSuperSelector = createSelector(
         if (state.TicketPage.datePicked.returnVisit == true) {
             if(state.TicketPage.datePicked.cityToVisit == "A"){
                 return state.TicketPage.travelRoutes.trace3.filter (t =>
-                    t.toLocaleString() > state.TicketPage.datePicked.timeToVisit)
+                    (t.toLocaleString() > state.TicketPage.datePicked.timeToVisit))
             }
             if(state.TicketPage.datePicked.cityToVisit == "B"){
                 return state.TicketPage.travelRoutes.trace2.filter (t =>
-                    t.toLocaleString() > state.TicketPage.datePicked.timeToVisit)
+                    (t.toLocaleString() > state.TicketPage.datePicked.timeToVisit))
             }
         }
     }
@@ -54,7 +57,7 @@ export const picketCitySuperSelector = createSelector(
 }
 )
 
-let journey = "Your journey starts at(MSK, SPB) "
+let journey = "Your journey starts at (MSK, SPB) "
 
 export const picketTimeSuperSelector = createSelector(
     getRoutesSelector,
