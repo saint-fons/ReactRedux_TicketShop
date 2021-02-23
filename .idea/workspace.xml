@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="acc2c380-9be0-4e5a-96ff-8a6248153f27" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Forms/NewForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Forms/NewForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Payment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Payment.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/PaymentContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/PaymentContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Shop.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Shop.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/ShopContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ShopContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Ticket-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Ticket-reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +21,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="ProjectId" id="1oneTTxFzMjUp6tRYo6SXc8hH5T" />
   <component name="ProjectViewState">

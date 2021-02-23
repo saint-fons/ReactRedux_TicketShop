@@ -79,7 +79,11 @@ const NewForm = (props) => {
             <Styles>
                 <Form
                     onSubmit={onSubmit}
-                    render={({ handleSubmit, form, submitting, pristine, values }) => (
+                    render={({ handleSubmit,
+                                 form,
+                                 submitting,
+                                 pristine,
+                                 values }) => (
                         <form onSubmit={handleSubmit}>
                             <div>
                                 <Field
@@ -159,7 +163,10 @@ const NewForm = (props) => {
                                     </NavLink>
                                 </button>
                             </div>
-                            <pre>{JSON.stringify(values, 0, 2)}</pre>
+                            <pre>
+                                You have chosen a city: {props.cityToVisit}
+
+                            </pre>
                         </form>
                     )}
                 />

@@ -1,10 +1,10 @@
 import React from "react"
-import ReactTicketRouter from "./Components/Router/ReactTicketRouter";
+import ShopContainer from "./Components/ShopContainer";
 
 function App() {
   return (
     <div>
-      <ReactTicketRouter />
+      <ShopContainer />
     </div>
   );
 }
