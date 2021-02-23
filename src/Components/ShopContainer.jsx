@@ -35,6 +35,7 @@ class ShopContainer extends React.Component {
                 provider={this.props.provider}
                 timezone={this.props.timezone}
                 cityToVisit={this.props.cityToVisit}
+                timeToVisit={this.props.timeToVisit}
             />
         </div>
     }
@@ -43,6 +44,7 @@ class ShopContainer extends React.Component {
 
 let mapStateToProps = (state) => {
     return {
+        timeToVisit: state.TicketPage.datePicked.timeToVisit,
         address: state.TicketPage.ip,
         provider: state.TicketPage.as.name,
         country: state.TicketPage.location.country,

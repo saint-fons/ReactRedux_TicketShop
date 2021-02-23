@@ -28,18 +28,13 @@ export const getWayBackSuperSelector = createSelector(
         }
         if (state.TicketPage.datePicked.returnVisit == true) {
             if(state.TicketPage.datePicked.cityToVisit == "A"){
-                console.log(typeof state.TicketPage.datePicked.timeToVisit)
-                console.log(state.TicketPage.datePicked.timeToVisit)
-
-
                 return state.TicketPage.travelRoutes.trace3.filter (t =>
                     t.toLocaleString() > state.TicketPage.datePicked.timeToVisit)
             }
             if(state.TicketPage.datePicked.cityToVisit == "B"){
                 return state.TicketPage.travelRoutes.trace2.filter (t =>
-                    t.toLocaleString() > state.TicketPage.datePicked.timeToVisit.toLocaleString())
+                    t.toLocaleString() > state.TicketPage.datePicked.timeToVisit)
             }
         }
-        debugger
     }
 )

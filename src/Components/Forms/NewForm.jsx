@@ -5,6 +5,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
 import TextField from 'material-ui/TextField'
 import Toggle from 'material-ui/Toggle'
+import Calculate from "../Calculate";
 
 
 const NewForm = (props) => {
@@ -31,6 +32,7 @@ const NewForm = (props) => {
     const onSubmit = async values => {
         await sleep(300)
         window.alert(JSON.stringify(values, 0, 2))
+
     }
     const required = value => (value ? undefined : 'Required')
     const cityValue = value => (value === "A" || value === "B" ? updateCity(value) : 'Select city A or B')
@@ -39,6 +41,8 @@ const NewForm = (props) => {
     const returnValue = value => (value ? updateReturn(value) : updateReturn(false))
     const composeValidators = (...validators) => value =>
         validators.reduce((error, validator) => error || validator(value), undefined)
+
+
 
 
 
@@ -109,7 +113,7 @@ const NewForm = (props) => {
                                     {
                                         props.getWayBackSuperSelector.map ( r =>
                                             <option
-                                                value={r}>{r.toLocaleString()}
+                                                value={r.toLocaleString()}>{r.toLocaleString()}
                                             </option>
                                         )
                                     }

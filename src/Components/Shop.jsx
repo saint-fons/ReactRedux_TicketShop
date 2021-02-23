@@ -22,6 +22,7 @@ const Shop = (props) => {
                     getWayBackSuperSelector={props.getWayBackSuperSelector}
                     time={props.time}
                     cityToVisit={props.cityToVisit}
+                    timeToVisit={props.timeToVisit}
                 />
 
                 <div>
