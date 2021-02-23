@@ -5,7 +5,6 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
 import TextField from 'material-ui/TextField'
 import Toggle from 'material-ui/Toggle'
-import Payment from "../Payment";
 import {NavLink} from "react-router-dom";
 
 
@@ -35,11 +34,16 @@ const NewForm = (props) => {
         window.alert(JSON.stringify(values, 0, 2))
 
     }
+
+    let ticketFormat = /^\+?(0|[1-9]\d*)$/
+
     const required = value => (value ? undefined : 'Required')
     const cityValue = value => (value === "A" || value === "B" ? updateCity(value) : 'Select city A or B')
     const timeValue = value => (value ? updateTime(value) : "Required")
     const timeWayBack = value => (value ? updateTimeToWayBack(value) : "Required")
-    const numberOfTickets = value => (value ? updateTimeToWayBack(value) : "Required")
+
+    const numberOfTickets = value => (value.match(ticketFormat) ? updateNumberOfTickets(value) : "Only positive integers")
+
     const returnValue = value => (value ? updateReturn(value) : updateReturn(false))
     const composeValidators = (...validators) => value =>
         validators.reduce((error, validator) => error || validator(value), undefined)
@@ -51,6 +55,13 @@ const NewForm = (props) => {
     let updateCity = (value) => {
         props.updateCityToVisitAC(value)
     }
+
+    let updateNumberOfTickets = (value) => {
+        props.updateNumberOfTicketsAC(value)
+    }
+
+
+
     let updateTime = (value) => {
         props.updateTimeToVisitAC(value)
     }
@@ -122,20 +133,13 @@ const NewForm = (props) => {
                                 </Field>
                             </div>
                             <div>
-                                <label>Number of tickets</label>
                                 <Field
                                     name="numberOfTickets"
-                                    component="select"
-                                    validate={numberOfTickets}
-                                >
-                                    {
-                                        props.getWayBackSuperSelector.map ( r =>
-                                            <option
-                                                value={r.toLocaleString()}>{r.toLocaleString()}
-                                            </option>
-                                        )
-                                    }
-                                </Field>
+                                    component={TextFieldAdapter}
+                                    validate={composeValidators(required, numberOfTickets)}
+                                    hintText="Number of tickets"
+                                    floatingLabelText="Select the number of tickets"
+                                />
                             </div>
 
                             <div className="buttons">

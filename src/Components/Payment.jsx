@@ -12,7 +12,7 @@ const Payment = (props) => {
             </NavLink>
 
             <div>
-                hi
+                You have selected {props.numberOfTickets} tickets
             </div>
         </div>
     )

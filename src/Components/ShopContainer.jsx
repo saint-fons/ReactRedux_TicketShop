@@ -2,7 +2,7 @@ import React from 'react'
 import {compose} from "redux";
 import {
     getAddress,
-    updateCityToVisitAC,
+    updateCityToVisitAC, updateNumberOfTicketsAC,
     updateReturnVisitAC,
     updateTimeToVisitAC,
     updateTimeToWayBackAC
@@ -28,6 +28,7 @@ class ShopContainer extends React.Component {
                 updateTimeToVisitAC={this.props.updateTimeToVisitAC}
                 updateTimeToWayBackAC={this.props.updateTimeToWayBackAC}
                 updateReturnVisitAC={this.props.updateReturnVisitAC}
+                updateNumberOfTicketsAC={this.props.updateNumberOfTicketsAC}
                 getRoutesSuperSelector={this.props.getRoutesSuperSelector}
                 getWayBackSuperSelector={this.props.getWayBackSuperSelector}
                 country={this.props.country}
@@ -63,6 +64,7 @@ export default compose(connect(mapStateToProps, {
     updateCityToVisitAC,
     updateTimeToVisitAC,
     updateReturnVisitAC,
-    updateTimeToWayBackAC
+    updateTimeToWayBackAC,
+    updateNumberOfTicketsAC
 }))
 (ShopContainer)

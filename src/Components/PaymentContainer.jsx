@@ -22,6 +22,7 @@ class PaymentContainer extends React.Component {
                 timezone={this.props.timezone}
                 cityToVisit={this.props.cityToVisit}
                 timeToVisit={this.props.timeToVisit}
+                numberOfTickets={this.props.numberOfTickets}
             />
         </div>
     }
@@ -39,6 +40,7 @@ let mapStateToProps = (state) => {
         lng: state.TicketPage.location.lng,
         timezone: state.TicketPage.location.timezone,
         cityToVisit: state.TicketPage.datePicked.cityToVisit,
+        numberOfTickets: state.TicketPage.datePicked.numberOfTickets,
         getRoutesSuperSelector: getRoutesSuperSelector(state),
         getWayBackSuperSelector: getWayBackSuperSelector(state)
     }

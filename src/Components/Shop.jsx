@@ -18,6 +18,7 @@ const Shop = (props) => {
                     updateTimeToVisitAC={props.updateTimeToVisitAC}
                     updateTimeToWayBackAC={props.updateTimeToWayBackAC}
                     updateReturnVisitAC={props.updateReturnVisitAC}
+                    updateNumberOfTicketsAC={props.updateNumberOfTicketsAC}
                     getRoutesSuperSelector={props.getRoutesSuperSelector}
                     getWayBackSuperSelector={props.getWayBackSuperSelector}
                     time={props.time}

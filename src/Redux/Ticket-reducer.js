@@ -3,6 +3,7 @@ import {locationInfoAPI} from "../API/API";
 
 const SET_ADDRESS = 'SET-ADDRESS';
 const CITY_TO_VISIT = 'CITY-TO-VISIT';
+const NUMBER_OF_TICKETS = 'NUMBER-OF-TICKETS';
 const TIME_TO_VISIT = 'TIME-TO-VISIT';
 const TIME_TO_WAY_BACK = 'TIME-TO-WAY_BACK';
 const RETURN_VISIT = 'RETURN_VISIT';
@@ -59,6 +60,7 @@ let initialState = {
     },
     datePicked: {
         cityToVisit: "",
+        numberOfTickets: "",
         timeToVisit: new Date(""),
         returnVisit: false,
         timeToWayBack: new Date("")
@@ -83,6 +85,13 @@ const ticketReducer = (
             stateCopy.datePicked.cityToVisit = action.newCity
             return stateCopy
         }
+
+        case NUMBER_OF_TICKETS: {
+            stateCopy = {...state}
+            stateCopy.datePicked.numberOfTickets = action.number
+            return stateCopy
+        }
+
         case TIME_TO_VISIT: {
             stateCopy = {...state}
             stateCopy.datePicked.timeToVisit = action.text
@@ -112,6 +121,10 @@ export const setAddress = (ip, location, as, isp, proxy) =>
 
 export const updateCityToVisitAC = (text) =>
     ({type: CITY_TO_VISIT, newCity: text})
+
+export const updateNumberOfTicketsAC = (text) =>
+    ({type: NUMBER_OF_TICKETS, number: text})
+
 
 export const updateTimeToVisitAC = (text) =>
     ({type: TIME_TO_VISIT, text})
