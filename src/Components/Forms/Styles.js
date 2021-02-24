@@ -58,7 +58,7 @@ export default styled.div`
   }
 
   form {
-    max-width: 500px;
+    max-width: 900px;
     z-index: 10;
     min-height: 300px;
     margin: auto;

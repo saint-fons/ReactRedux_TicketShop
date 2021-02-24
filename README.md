@@ -57,6 +57,21 @@
 
 ![img.png](src/Style/IMG/wayBackPicked3.png)
 
+#### XII. Для пользователей из разных стран предусмотрен перевод в текущий часовой пояс. Пример IP адреса для МСК, СПБ
+
+![img.png](src/Style/IMG/timezone1.png)
+
+#### XII. Пример для Нью-Йорка. Разница с МСК, СПБ -8 часов
+
+![img.png](src/Style/IMG/timezone2.png)
+
+#### XIII. Пример для Амстердама. Разница с МСК, СПБ -2 часа
+
+![img.png](src/Style/IMG/timezone3.png)
+
+#### XIII. Пример для Сингапура. Разница с МСК, СПБ + 5 часов
+
+![img.png](src/Style/IMG/timezone4.png)
 
 
 ## Структура приложения;

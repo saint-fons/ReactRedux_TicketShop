@@ -90,13 +90,48 @@ export const picketTimeSuperSelector = createSelector(
         if (state.TicketPage.datePicked.timeToVisit == null) {
             return ""
         }
-        if (true) {
-            return (journey + state.TicketPage.datePicked.timeToVisit.toString())
+        if (state.TicketPage.datePicked.timeToVisit != null) {
+
+
+            let currentTime = new Date(state.TicketPage.datePicked.timeToVisit)
+
+            let timeZone
+            timeZone = state.TicketPage.location.timezone
+
+
+            let hours = timeZone.split(":").splice(0, 1)
+            hours = parseInt(hours[0], 10)
+            let minutes = timeZone.split(":").splice(1, 1)
+            minutes = parseInt(minutes[0], 10)
+
+            if(hours === 3) {
+                return (journey + state.TicketPage.datePicked.timeToVisit.toString() + " and ur current time")
+            }
+            if(hours => 0 && hours < 3) {
+                hours = 3 - hours
+                currentTime.setHours(currentTime.getHours() - hours)
+                currentTime.setMinutes(currentTime.getMinutes() - minutes)
+                return (journey + state.TicketPage.datePicked.timeToVisit.toString() + " and " + currentTime.toLocaleString() + " (current timezone)")
+            }
+            if(hours > 3) {
+                hours = hours - 3
+                currentTime.setHours(currentTime.getHours() + hours)
+                currentTime.setMinutes(currentTime.getMinutes() + minutes)
+                return (journey + state.TicketPage.datePicked.timeToVisit.toString() + " and " + currentTime.toLocaleString() + " (current timezone)")
+            }
+            if(hours < 0) {
+                hours = hours - 3
+                currentTime.setHours(currentTime.getHours() - hours)
+                currentTime.setMinutes(currentTime.getMinutes() - minutes)
+                return (journey + state.TicketPage.datePicked.timeToVisit.toString() + " and " + currentTime.toLocaleString() + " (current timezone)")
+            }
+
+
         }
 }
 )
 
-let wayBack = "You have chosen a return ticket to "
+let wayBack = "You return ticket to (MSK) "
 
 export const picketTimeWayBackSuperSelector = createSelector(
     getRoutesSelector,
@@ -127,9 +162,11 @@ export const picketNumberOfTicketsSuperSelector = createSelector(
             if(state.TicketPage.datePicked.timeToWayBack == null) {
                 return (numberOfTickets + state.TicketPage.datePicked.numberOfTickets + oneWayPrise + (priceWithoutWayBack * state.TicketPage.datePicked.numberOfTickets))
             }
-            if(true) {
+            if(state.TicketPage.datePicked.timeToWayBack != null) {
                 return (numberOfTickets + state.TicketPage.datePicked.numberOfTickets + oneWayPrise + (priceWithWayBack * state.TicketPage.datePicked.numberOfTickets))
             }
+
+
         }
 }
 )
