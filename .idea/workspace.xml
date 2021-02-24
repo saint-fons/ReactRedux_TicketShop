@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="acc2c380-9be0-4e5a-96ff-8a6248153f27" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Forms/NewForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Forms/NewForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Shop.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Shop.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/ShopContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ShopContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Ticket-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Ticket-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Ticket-selector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Ticket-selector.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Style/IMG/price1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Style/IMG/price1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Style/IMG/priceWithWayBack.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Style/IMG/priceWithWayBack.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Style/IMG/wayBackPicked.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Style/IMG/wayBackPicked.png" afterDir="false" />
-    </list>
+    <list default="true" id="acc2c380-9be0-4e5a-96ff-8a6248153f27" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,7 +58,7 @@
       <workItem from="1614001336501" duration="10218000" />
       <workItem from="1614059460217" duration="4897000" />
       <workItem from="1614095796045" duration="2530000" />
-      <workItem from="1614153171614" duration="10307000" />
+      <workItem from="1614153171614" duration="11076000" />
     </task>
     <task id="LOCAL-00001" summary="City to update">
       <created>1613930431445</created>
@@ -190,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614153368691</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="time filter fixed. readme added. time travel calculation">
+      <created>1614191450959</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1614191450959</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,7 +222,8 @@
     <MESSAGE value="warning fixed" />
     <MESSAGE value="task1 fix" />
     <MESSAGE value="logo top fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="logo top fix" />
+    <MESSAGE value="time filter fixed. readme added. time travel calculation" />
+    <option name="LAST_COMMIT_MESSAGE" value="time filter fixed. readme added. time travel calculation" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

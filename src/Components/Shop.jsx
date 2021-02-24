@@ -3,7 +3,6 @@ import NewForm from "./Forms/NewForm";
 import Map from "./Map/Map";
 import "./../Style/style.css"
 import ShopMetaData from "./ShopMetaData";
-import NevaTripLogo from "./../Style/nevatrip_logo.png"
 
 const Shop = (props) => {
 
