@@ -38,7 +38,6 @@ let initialState = {
             "Your route not selected"
         ],
         trace2: [
-            new Date("01.08.2021 18:10"),
             new Date("01.08.2021 18:30"),
             new Date("01.08.2021 19:00"),
             new Date("01.08.2021 19:10"),
@@ -47,7 +46,11 @@ let initialState = {
             new Date("01.08.2021 20:05"),
             new Date("01.08.2021 20:10"),
             new Date("01.08.2021 20:30"),
-            new Date("01.08.2021 20:50")
+            new Date("01.08.2021 20:50"),
+            new Date("01.08.2021 21:20"),
+            new Date("01.08.2021 22:20"),
+            new Date("01.08.2021 22:40"),
+            new Date("01.08.2021 23:50")
         ],
         trace3: [
             new Date("01.08.2021 18:05"),
@@ -58,7 +61,10 @@ let initialState = {
             new Date("01.08.2021 19:50"),
             new Date("01.08.2021 20:00"),
             new Date("01.08.2021 20:20"),
-            new Date("01.08.2021 20:50")
+            new Date("01.08.2021 21:20"),
+            new Date("01.08.2021 22:20"),
+            new Date("01.08.2021 22:40"),
+            new Date("01.08.2021 23:50")
         ],
         trace4: [
             "Way back not selected"

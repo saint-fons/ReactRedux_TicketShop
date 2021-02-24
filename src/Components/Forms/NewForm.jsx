@@ -1,6 +1,6 @@
 import React from 'react'
 import Styles from './Styles'
-import { Form, Field } from 'react-final-form'
+import {Form, Field} from 'react-final-form'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
 import TextField from 'material-ui/TextField'
@@ -9,7 +9,7 @@ import Toggle from 'material-ui/Toggle'
 
 const NewForm = (props) => {
 
-    const TextFieldAdapter = ({ input, meta, ...rest }) => (
+    const TextFieldAdapter = ({input, meta, ...rest}) => (
         <TextField
             {...input}
             {...rest}
@@ -18,7 +18,7 @@ const NewForm = (props) => {
         />
     )
 
-    const ToggleAdapter = ({ input: { onChange, value }, label, ...rest }) => (
+    const ToggleAdapter = ({input: {onChange, value}, label, ...rest}) => (
         <Toggle
             label={label}
             toggled={!!value}
@@ -29,8 +29,7 @@ const NewForm = (props) => {
     const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
     const onSubmit = async values => {
-        await sleep(300)
-        window.alert(JSON.stringify(values, 0, 2))
+        alert("hi")
 
     }
 
@@ -48,9 +47,6 @@ const NewForm = (props) => {
         validators.reduce((error, validator) => error || validator(value), undefined)
 
 
-
-
-
     let updateCity = (value) => {
         props.updateCityToVisitAC(value)
     }
@@ -58,7 +54,6 @@ const NewForm = (props) => {
     let updateNumberOfTickets = (value) => {
         props.updateNumberOfTicketsAC(value)
     }
-
 
 
     let updateTime = (value) => {
@@ -78,11 +73,13 @@ const NewForm = (props) => {
             <Styles>
                 <Form
                     onSubmit={onSubmit}
-                    render={({ handleSubmit,
+                    render={({
+                                 handleSubmit,
                                  form,
                                  submitting,
                                  pristine,
-                                 values }) => (
+                                 values
+                             }) => (
                         <form onSubmit={handleSubmit}>
                             <div>
                                 <Field
@@ -102,7 +99,7 @@ const NewForm = (props) => {
                                 >
                                     {
 
-                                        props.getRoutesSuperSelector.map ( r =>
+                                        props.getRoutesSuperSelector.map(r =>
                                             <option
                                                 key={r}
                                                 value={r.toLocaleString()}>{r.toLocaleString()}
@@ -128,7 +125,7 @@ const NewForm = (props) => {
                                     validate={timeWayBack}
                                 >
                                     {
-                                        props.getWayBackSuperSelector.map ( r =>
+                                        props.getWayBackSuperSelector.map(r =>
                                             <option
                                                 key={r}
                                                 value={r.toLocaleString()}>{r.toLocaleString()}
@@ -146,10 +143,13 @@ const NewForm = (props) => {
                                     floatingLabelText="Select the number of tickets"
                                 />
                             </div>
+
                             <pre>
                                 {props.picketCitySuperSelector}
                                 <br/>
                                 {props.picketTimeSuperSelector}
+                                <br/>
+                                {props.getTimeToWayBackSuperSelector}
                                 <br/>
                                 {props.picketTimeWayBackSuperSelector}
                                 <br/>

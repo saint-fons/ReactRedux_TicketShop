@@ -22,6 +22,7 @@ const Shop = (props) => {
                     picketTimeSuperSelector={props.picketTimeSuperSelector}
                     picketTimeWayBackSuperSelector={props.picketTimeWayBackSuperSelector}
                     picketNumberOfTicketsSuperSelector={props.picketNumberOfTicketsSuperSelector}
+                    getTimeToWayBackSuperSelector={props.getTimeToWayBackSuperSelector}
                     time={props.time}
                     cityToVisit={props.cityToVisit}
                     timeToVisit={props.timeToVisit}

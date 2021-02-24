@@ -3,6 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="acc2c380-9be0-4e5a-96ff-8a6248153f27" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Forms/NewForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Forms/NewForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Shop.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Shop.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/ShopContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ShopContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/Ticket-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Ticket-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/Ticket-selector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Ticket-selector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Style/IMG/price1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Style/IMG/price1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Style/IMG/priceWithWayBack.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Style/IMG/priceWithWayBack.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Style/IMG/wayBackPicked.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Style/IMG/wayBackPicked.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +38,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../rest-countries-api-with-color-theme-switcher-master/rest-countries-app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../JS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -60,6 +69,7 @@
       <workItem from="1614001336501" duration="10218000" />
       <workItem from="1614059460217" duration="4897000" />
       <workItem from="1614095796045" duration="2530000" />
+      <workItem from="1614153171614" duration="10307000" />
     </task>
     <task id="LOCAL-00001" summary="City to update">
       <created>1613930431445</created>
@@ -173,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614104376926</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="logo top fix">
+      <created>1614153368691</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1614153368691</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,7 +225,8 @@
     <MESSAGE value="task 1 added" />
     <MESSAGE value="warning fixed" />
     <MESSAGE value="task1 fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="task1 fix" />
+    <MESSAGE value="logo top fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="logo top fix" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

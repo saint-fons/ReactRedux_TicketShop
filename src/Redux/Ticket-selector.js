@@ -20,6 +20,29 @@ export const getRoutesSuperSelector = createSelector(
     }
 )
 
+export const getTimeToWayBackSuperSelector = createSelector(
+    getRoutesSelector,
+    (state) => {
+        if (state.TicketPage.datePicked.timeToVisit !== null && state.TicketPage.datePicked.timeToWayBack !== null) {
+            let visitTime = new Date(state.TicketPage.datePicked.timeToVisit)
+            let visitHours = visitTime.getHours()
+            let visitMinutes = visitTime.getMinutes()
+
+            let visitBackTime = new Date(state.TicketPage.datePicked.timeToWayBack)
+            let visitBackHours = visitBackTime.getHours()
+            let visitBackMinutes = visitBackTime.getMinutes()
+
+            return ("Your travel time will be " + (visitBackHours - visitHours) + " hours and " + (visitBackMinutes - visitMinutes) + " minutes")
+        }
+        if (state.TicketPage.datePicked.timeToVisit !== null ) {
+            return ("Your travel time will be 50 minutes" )
+        }
+    }
+)
+
+
+
+
 
 export const getWayBackSuperSelector = createSelector(
     getRoutesSelector,
@@ -29,12 +52,16 @@ export const getWayBackSuperSelector = createSelector(
         }
         if (state.TicketPage.datePicked.returnVisit === true) {
             if(state.TicketPage.datePicked.cityToVisit === "A"){
+                let newTimeToVisit = new Date(state.TicketPage.datePicked.timeToVisit)
+                newTimeToVisit.setMinutes(newTimeToVisit.getMinutes() + 50)
                 return state.TicketPage.travelRoutes.trace3.filter (t =>
-                    (t.toLocaleString() > state.TicketPage.datePicked.timeToVisit))
+                    (t > newTimeToVisit))
             }
             if(state.TicketPage.datePicked.cityToVisit === "B"){
+                let newTimeToVisit = new Date(state.TicketPage.datePicked.timeToVisit)
+                newTimeToVisit.setMinutes(newTimeToVisit.getMinutes() + 50)
                 return state.TicketPage.travelRoutes.trace2.filter (t =>
-                    (t.toLocaleString() > state.TicketPage.datePicked.timeToVisit))
+                    (t > newTimeToVisit))
             }
         }
     }
@@ -47,10 +74,10 @@ export const picketCitySuperSelector = createSelector(
             return ""
         }
         if (state.TicketPage.datePicked.cityToVisit === "A") {
-            return ("Your journey begins to city A")
+            return ("Your journey begins from city A to city B")
         }
         if (state.TicketPage.datePicked.cityToVisit === "B") {
-            return ("Your journey begins to city B")
+            return ("Your journey begins from city B to city A")
         }
 }
 )
