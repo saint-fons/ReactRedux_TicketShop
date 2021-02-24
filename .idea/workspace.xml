@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="acc2c380-9be0-4e5a-96ff-8a6248153f27" name="Default Changelist" comment="" />
+    <list default="true" id="acc2c380-9be0-4e5a-96ff-8a6248153f27" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +59,7 @@
       <workItem from="1613926793411" duration="30587000" />
       <workItem from="1614001336501" duration="10218000" />
       <workItem from="1614059460217" duration="4897000" />
-      <workItem from="1614095796045" duration="1712000" />
+      <workItem from="1614095796045" duration="2530000" />
     </task>
     <task id="LOCAL-00001" summary="City to update">
       <created>1613930431445</created>
@@ -164,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614103526837</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="task1 fix">
+      <created>1614104376926</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1614104376926</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,7 +207,8 @@
     <MESSAGE value="README.md fixed" />
     <MESSAGE value="task 1 added" />
     <MESSAGE value="warning fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="warning fixed" />
+    <MESSAGE value="task1 fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="task1 fix" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

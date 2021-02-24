@@ -61,7 +61,7 @@ export default styled.div`
     max-width: 500px;
     z-index: 10;
     min-height: 300px;
-    margin: 6% auto;
+    margin: auto;
     border: 1px solid #ccc;
     background-color: white;
     padding: 20px;

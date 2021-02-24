@@ -10,9 +10,6 @@ const Shop = (props) => {
     return (
         <div className={"container"}>
             <div className={"container__header"}>
-                <div className={"container__address"}>
-                    <img className={"NevaTripLogo"} src={NevaTripLogo} alt={"NevaTripLogo"} />
-                </div>
                 <NewForm
                     updateCityToVisitAC={props.updateCityToVisitAC}
                     updateTimeToVisitAC={props.updateTimeToVisitAC}
