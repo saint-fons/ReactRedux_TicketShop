@@ -1,4 +1,4 @@
-# TASK 2 - React Redux(NevaTrip App)
+# TASK 2 - React + Redux
 
 Веб версия приложения: [live version](https://react-redux-ticket-shop-git-master-saint-fons.vercel.app/)
 

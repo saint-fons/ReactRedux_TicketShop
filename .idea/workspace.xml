@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="acc2c380-9be0-4e5a-96ff-8a6248153f27" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Forms/Styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Forms/Styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Ticket-selector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Ticket-selector.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +29,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../JS" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../todoreact_with_hooks" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -47,6 +44,23 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\git\nevatrip\ticket_shop\src\Style\IMG" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -63,7 +77,9 @@
       <workItem from="1614001336501" duration="10218000" />
       <workItem from="1614059460217" duration="4897000" />
       <workItem from="1614095796045" duration="2530000" />
-      <workItem from="1614153171614" duration="21408000" />
+      <workItem from="1614153171614" duration="22358000" />
+      <workItem from="1614229546549" duration="740000" />
+      <workItem from="1614768384307" duration="730000" />
     </task>
     <task id="LOCAL-00001" summary="City to update">
       <created>1613930431445</created>
@@ -198,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614192724117</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="timezone detect. readme">
+      <created>1614206632417</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1614206632417</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,7 +259,8 @@
     <MESSAGE value="logo top fix" />
     <MESSAGE value="time filter fixed. readme added. time travel calculation" />
     <MESSAGE value="ShopContainer. getAddress activated" />
-    <option name="LAST_COMMIT_MESSAGE" value="ShopContainer. getAddress activated" />
+    <MESSAGE value="timezone detect. readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="timezone detect. readme" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
